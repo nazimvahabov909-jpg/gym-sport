@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { ChevronDown, Menu, Phone, X } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import type { CategoryNode } from "@/lib/queries/catalog";
@@ -46,18 +47,12 @@ export function MobileMenu({
 
   const close = () => setOpen(false);
 
-  return (
-    <>
-      <button
-        type="button"
-        onClick={() => setOpen(true)}
-        aria-label={labels.menu}
-        className="grid size-10 place-items-center rounded-full text-ink-900 transition hover:bg-ink-100 lg:hidden"
-      >
-        <Menu className="size-5" aria-hidden />
-      </button>
-
-      {open ? (
+  // The header sets `backdrop-filter`, which makes it the containing block for
+  // any `position: fixed` descendant — the drawer was being clipped to the
+  // header's own 120px box. A portal lifts it out to <body>, where `inset-0`
+  // means the viewport again.
+  const drawer = (
+    open ? (
         <div className="fixed inset-0 z-[70] lg:hidden">
           <div
             className="absolute inset-0 bg-ink-900/45 backdrop-blur-[2px]"
@@ -172,7 +167,21 @@ export function MobileMenu({
             </a>
           </div>
         </div>
-      ) : null}
+      ) : null
+  );
+
+  return (
+    <>
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        aria-label={labels.menu}
+        className="grid size-10 place-items-center rounded-full text-ink-900 transition hover:bg-ink-100 lg:hidden"
+      >
+        <Menu className="size-5" aria-hidden />
+      </button>
+
+      {typeof document === "undefined" ? null : createPortal(drawer, document.body)}
     </>
   );
 }

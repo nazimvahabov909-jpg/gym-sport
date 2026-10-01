@@ -20,7 +20,9 @@
     "messages": "python3 scripts/build-messages.py",
     "check:hydration": "node scripts/dev/check-hydration.mjs",
     "postinstall": "prisma generate",
-    "build:turbo": "prisma generate && next build"
+    "build:turbo": "prisma generate && next build",
+    "check:overlays": "node scripts/dev/check-overlays.mjs",
+    "check:drawer": "node scripts/dev/check-drawer-behavior.mjs"
   },
   "dependencies": {
     "@prisma/adapter-mariadb": "^7.10.0",

@@ -128,6 +128,8 @@ client tərəfdə gəlir — məhz buna görə kataloq səhifələri statik qala
 | `npm run e2e:admin-write` | admin redaktəsinin mağazaya çatması |
 | `npm run check:locales` | 4 dildə əsas səhifələr + canonical/hreflang |
 | `npm run check:hydration` | brauzer genişlənməsi simulyasiyası ilə hidrasiya |
+| `npm run check:overlays` | mobil drawer, filtr paneli və modalların mövqeyi |
+| `npm run check:drawer` | mobil menyunun davranışı (açıl/bağlan/keçid) |
 
 E2E skriptləri quraşdırılmış Google Chrome-dan istifadə edir (`puppeteer-core`),
 ona görə ayrıca brauzer yüklənmir.
