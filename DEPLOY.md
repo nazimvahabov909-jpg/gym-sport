@@ -82,6 +82,8 @@ davamlı (persistent) saxlanmalıdır. Deploy hər dəfə qovluğu təmizləyirs
 | `Can't resolve '@/generated/prisma/client'` | `postinstall` işə düşməyib — `npm run build` özü `prisma generate` çağırır, ona görə build əmrinin dəyişdiyinə əmin olun |
 | `prisma: command not found` | `.env`-də `NODE_ENV=production` var → devDependencies quraşdırılmır. Həmin sətri silin |
 | `Cannot find module '@tailwindcss/postcss'` | Eyni səbəb — `NODE_ENV` sətrini silin |
+| `TurbopackInternalError … globals.css` | Build konteynerində Turbopack-ın PostCSS alt-prosesi ölür. `build` əmri artıq `--webpack` istifadə edir |
+| `pool timeout` və ya `database unavailable` | Layihə kökündə `.env.production` faylı varsa, Next onu `.env`-dən üstün tutur. Production konfiqurasiyasını **`.env`** adı ilə saxlayın |
 | Build keçir, amma sayt boşdur | Baza import olunmayıb; build loglarında `[build] … database unavailable` sətirləri olur |
 | `Access denied for user` | `DATABASE_URL`-də parol səhv və ya URL-encode edilməyib |
 | Şəkillər açılmır | `public/media/` qovluğu deploy-a daxil olmayıb |

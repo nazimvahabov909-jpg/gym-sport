@@ -9,12 +9,12 @@ const globalForPrisma = globalThis as unknown as { prisma?: PrismaClient };
 
 /**
  * The adapter takes either a connection string or a pool config, not both, so
- * the URL is parsed here to attach pool limits.
+ * the URL is parsed here to make the pool size configurable: shared MySQL
+ * plans cap total connections low, and a build renders many pages at once
+ * across several worker processes.
  *
- * Prerendering renders many pages at once across several workers. With the
- * driver's 10s default the queue outruns the timeout and pages fail with
- * "pool timeout", so the wait is generous while the pool itself stays small —
- * shared MySQL plans cap total connections quite low.
+ * The acquire wait stays close to the driver's default on purpose — a long one
+ * turns a wrong host into a build that hangs for minutes instead of failing.
  */
 function poolConfig(url: string) {
   const parsed = new URL(url);
@@ -24,9 +24,9 @@ function poolConfig(url: string) {
     user: decodeURIComponent(parsed.username),
     password: decodeURIComponent(parsed.password),
     database: decodeURIComponent(parsed.pathname.replace(/^\//, "")),
-    connectionLimit: Number(process.env.DATABASE_POOL_SIZE ?? 5),
-    acquireTimeout: 60_000,
-    connectTimeout: 20_000,
+    connectionLimit: Number(process.env.DATABASE_POOL_SIZE ?? 10),
+    acquireTimeout: 15_000,
+    connectTimeout: 10_000,
     // Reconnect rather than serve an error after an idle disconnect.
     idleTimeout: 60,
   };
