@@ -15,8 +15,6 @@ NEXT_PUBLIC_SITE_URL="https://darkslategray-lion-563187.hostingersite.com"
 NEXT_PUBLIC_SITE_NAME="United Sport"
 
 AUTH_SECRET="BURAYA_GENERASIYA_OLUNMUS_ACAR"
-
-NODE_ENV="production"
 ```
 
 - `PAROL` yerinə hPanel-dəki baza parolunu yazın. Parolda `@ : / ? # & %`
@@ -30,6 +28,9 @@ NODE_ENV="production"
   Çıxan dəyəri `.env`-ə yazın. Dəyişsəniz, bütün aktiv sessiyalar bağlanacaq.
 - `NEXT_PUBLIC_SITE_URL` **build zamanı** koda yazılır. Domeni sonra
   dəyişsəniz, yenidən build etmək lazımdır.
+- **`NODE_ENV` yazmayın.** Təyin olunsa, `npm install` devDependencies-i ötürür
+  və build `tailwindcss` tapmadığı üçün dayanır. `next build` / `next start`
+  bu dəyəri özü düzgün təyin edir.
 
 ---
 
@@ -79,6 +80,8 @@ davamlı (persistent) saxlanmalıdır. Deploy hər dəfə qovluğu təmizləyirs
 | Əlamət | Səbəb |
 | --- | --- |
 | `Can't resolve '@/generated/prisma/client'` | `postinstall` işə düşməyib — `npm run build` özü `prisma generate` çağırır, ona görə build əmrinin dəyişdiyinə əmin olun |
+| `prisma: command not found` | `.env`-də `NODE_ENV=production` var → devDependencies quraşdırılmır. Həmin sətri silin |
+| `Cannot find module '@tailwindcss/postcss'` | Eyni səbəb — `NODE_ENV` sətrini silin |
 | Build keçir, amma sayt boşdur | Baza import olunmayıb; build loglarında `[build] … database unavailable` sətirləri olur |
 | `Access denied for user` | `DATABASE_URL`-də parol səhv və ya URL-encode edilməyib |
 | Şəkillər açılmır | `public/media/` qovluğu deploy-a daxil olmayıb |
