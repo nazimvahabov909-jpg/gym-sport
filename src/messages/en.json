@@ -1,0 +1,209 @@
+{
+  "common": {
+    "siteName": "United Sport",
+    "tagline": "Equipment for gyms and home training",
+    "search": "Search",
+    "searchPlaceholder": "Search machines, brands or SKU…",
+    "menu": "Menu",
+    "close": "Close",
+    "loading": "Loading…",
+    "viewAll": "View all",
+    "readMore": "Read more",
+    "back": "Back",
+    "home": "Home",
+    "language": "Language",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "send": "Send",
+    "sending": "Sending…",
+    "save": "Save",
+    "cancel": "Cancel",
+    "remove": "Remove",
+    "apply": "Apply",
+    "reset": "Reset",
+    "required": "This field is required",
+    "somethingWrong": "Something went wrong. Please try again.",
+    "prev": "Previous",
+    "next": "Next",
+    "skipToContent": "Skip to content",
+    "showMore": "Show more",
+    "page": "Page",
+    "of": "of"
+  },
+  "nav": {
+    "home": "Home",
+    "catalog": "Catalogue",
+    "brands": "Brands",
+    "blog": "Blog",
+    "contacts": "Contacts",
+    "about": "About us",
+    "delivery": "Delivery",
+    "account": "Account",
+    "cart": "Cart",
+    "wishlist": "Wishlist"
+  },
+  "home": {
+    "heroTitle": "Professional gym equipment for clubs and home",
+    "heroSubtitle": "Official supplier of Ferro, VolksGym, MBH Fitness and Kettler in Uzbekistan",
+    "shopNow": "Shop now",
+    "categoriesTitle": "Categories",
+    "latestTitle": "New arrivals",
+    "featuredTitle": "Featured",
+    "brandsTitle": "Our brands",
+    "blogTitle": "From the blog",
+    "seoTitle": "Sports equipment for fitness clubs and gyms. Home training machines.",
+    "seoText": "Our catalogue covers everything a fitness club in Tashkent needs: strength and cardio machines, fitness accessories, free weights, storage racks and flooring — quality equipment at fair prices. Fitting out a full gym with us is straightforward.",
+    "benefits": {
+      "delivery": {
+        "title": "Delivery across Uzbekistan",
+        "text": "Delivered and carried into your gym"
+      },
+      "warranty": {
+        "title": "Official warranty",
+        "text": "Manufacturer-backed warranty"
+      },
+      "service": {
+        "title": "Service & assembly",
+        "text": "Our own service team"
+      },
+      "support": {
+        "title": "Equipment consulting",
+        "text": "We help you plan the whole floor"
+      }
+    },
+    "stats": {
+      "models": "models in stock",
+      "brands": "official brands",
+      "years": "years in business"
+    },
+    "heroBadge": "Official supplier in Uzbekistan",
+    "exploreCatalog": "Explore the catalogue",
+    "talkToUs": "Plan your gym",
+    "turnkeyEyebrow": "Turn-key",
+    "turnkeyTitle": "We plan, deliver and build the whole floor",
+    "turnkeyText": "From equipment layout and flooring to on-site assembly and ongoing service. We work with clubs, hotels and corporate gyms across Uzbekistan.",
+    "scroll": "Scroll",
+    "popularEyebrow": "Customer favourites"
+  },
+  "catalog": {
+    "title": "Catalogue",
+    "productCount": "{count, plural, one {# product} other {# products}}",
+    "allProducts": "All products",
+    "filters": "Filters",
+    "sort": "Sort",
+    "sortNewest": "Newest first",
+    "sortNameAsc": "Name A-Z",
+    "sortPriceAsc": "Price: low to high",
+    "sortPriceDesc": "Price: high to low",
+    "brand": "Brand",
+    "category": "Category",
+    "inStockOnly": "In stock only",
+    "nothingFound": "No products found",
+    "nothingFoundText": "Try changing the filters or your search term.",
+    "subcategories": "Subcategories"
+  },
+  "product": {
+    "sku": "SKU",
+    "brand": "Brand",
+    "availability": "Availability",
+    "inStock": "In stock",
+    "outOfStock": "Out of stock",
+    "preOrder": "Pre-order",
+    "onOrder": "On order",
+    "addToCart": "Add to cart",
+    "inCart": "In cart",
+    "priceOnRequest": "Price on request",
+    "requestPrice": "Request a price",
+    "description": "Description",
+    "noDescription": "A full description is on its way. Call us and we will walk you through this model.",
+    "specs": "Specifications",
+    "related": "You may also like",
+    "quantity": "Quantity",
+    "gallery": "Product photos"
+  },
+  "cart": {
+    "title": "Cart",
+    "empty": "Your cart is empty",
+    "emptyText": "Add a machine from the catalogue and we will take it from there.",
+    "continue": "Continue shopping",
+    "subtotal": "Subtotal",
+    "total": "Total",
+    "checkout": "Checkout",
+    "quoteNotice": "Some items have no listed price — a manager will confirm the cost with you."
+  },
+  "checkout": {
+    "title": "Checkout",
+    "contact": "Contact details",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "city": "City",
+    "addressLine": "Delivery address",
+    "comment": "Order notes",
+    "payment": "Payment method",
+    "paymentCash": "Cash on delivery",
+    "paymentTransfer": "Bank transfer",
+    "paymentCard": "Card on delivery",
+    "placeOrder": "Place order",
+    "summary": "Order summary",
+    "successTitle": "Thank you for your order!",
+    "successText": "A manager will call you shortly to confirm the details.",
+    "orderNumber": "Order number"
+  },
+  "lead": {
+    "title": "Request a price",
+    "text": "Leave your contacts and a manager will call you back with the current price.",
+    "name": "Your name",
+    "message": "Message",
+    "sent": "Request sent",
+    "sentText": "We will get back to you during business hours.",
+    "callback": "Request a call"
+  },
+  "account": {
+    "login": "Sign in",
+    "register": "Create account",
+    "logout": "Sign out",
+    "title": "My account",
+    "orders": "My orders",
+    "profile": "Profile",
+    "password": "Password",
+    "noOrders": "No orders yet",
+    "noAccount": "No account yet?",
+    "haveAccount": "Already registered?",
+    "invalidCredentials": "Wrong email or password",
+    "emailTaken": "That email is already registered",
+    "passwordTooShort": "Password must be at least 8 characters"
+  },
+  "search": {
+    "title": "Search",
+    "resultsFor": "Results for",
+    "noResults": "Nothing found"
+  },
+  "blog": {
+    "title": "Blog",
+    "readMore": "Read article",
+    "empty": "No articles yet",
+    "backToBlog": "All articles"
+  },
+  "footer": {
+    "info": "Information",
+    "catalogue": "Catalogue",
+    "contacts": "Contacts",
+    "followUs": "Follow us",
+    "rights": "All rights reserved"
+  },
+  "brands": {
+    "title": "Brands",
+    "subtitle": "Official supply from manufacturers we work with directly."
+  },
+  "contacts": {
+    "title": "Contacts",
+    "writeUs": "Write to us",
+    "workingHours": "Opening hours"
+  },
+  "errors": {
+    "notFoundTitle": "Page not found",
+    "notFoundText": "The product may have been discontinued, or the address is mistyped.",
+    "goHome": "Go home"
+  }
+}

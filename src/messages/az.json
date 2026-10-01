@@ -1,0 +1,209 @@
+{
+  "common": {
+    "siteName": "United Sport",
+    "tagline": "Fitnes klubları və ev üçün avadanlıq",
+    "search": "Axtarış",
+    "searchPlaceholder": "Trenajyor, brend və ya artikul tapın…",
+    "menu": "Menyu",
+    "close": "Bağla",
+    "loading": "Yüklənir…",
+    "viewAll": "Hamısına bax",
+    "readMore": "Ətraflı",
+    "back": "Geri",
+    "home": "Ana səhifə",
+    "language": "Dil",
+    "phone": "Telefon",
+    "email": "E-poçt",
+    "address": "Ünvan",
+    "send": "Göndər",
+    "sending": "Göndərilir…",
+    "save": "Yadda saxla",
+    "cancel": "Ləğv et",
+    "remove": "Sil",
+    "apply": "Tətbiq et",
+    "reset": "Sıfırla",
+    "required": "Məcburi sahə",
+    "somethingWrong": "Nəsə səhv getdi. Yenidən cəhd edin.",
+    "prev": "Əvvəlki",
+    "next": "Növbəti",
+    "skipToContent": "Məzmuna keç",
+    "showMore": "Daha çox göstər",
+    "page": "Səhifə",
+    "of": "/"
+  },
+  "nav": {
+    "home": "Ana səhifə",
+    "catalog": "Kataloq",
+    "brands": "Brendlər",
+    "blog": "Bloq",
+    "contacts": "Əlaqə",
+    "about": "Haqqımızda",
+    "delivery": "Çatdırılma",
+    "account": "Kabinet",
+    "cart": "Səbət",
+    "wishlist": "Seçilmişlər"
+  },
+  "home": {
+    "heroTitle": "Zal və ev üçün peşəkar trenajyorlar",
+    "heroSubtitle": "Özbəkistanda Ferro, VolksGym, MBH Fitness və Kettler-in rəsmi tədarükçüsü",
+    "shopNow": "Kataloqa",
+    "categoriesTitle": "Kateqoriyalar",
+    "latestTitle": "Yeniliklər",
+    "featuredTitle": "Tövsiyə edirik",
+    "brandsTitle": "Brendlərimiz",
+    "blogTitle": "Məqalələr",
+    "seoTitle": "Fitnes klubları və zallar üçün idman malları. Ev üçün trenajyorlar.",
+    "seoText": "Kataloqumuzda Daşkənddəki fitnes klubu üçün avadanlıq seçə bilərsiniz. Trenajyor zalı üçün keyfiyyətli avadanlığın geniş çeşidi sərfəli qiymətlərlə: güc və kardio trenajyorlar, fitnes avadanlığı, sərbəst çəkilər, inventar dayaqları və döşəmə örtükləri. Zalı tam komplektləşdirmək bizimlə çox rahatdır.",
+    "benefits": {
+      "delivery": {
+        "title": "Özbəkistan üzrə çatdırılma",
+        "text": "Zala qədər çatdırırıq"
+      },
+      "warranty": {
+        "title": "Rəsmi zəmanət",
+        "text": "İstehsalçı zəmanəti"
+      },
+      "service": {
+        "title": "Servis və montaj",
+        "text": "Öz servis xidmətimiz"
+      },
+      "support": {
+        "title": "Avadanlıq seçimi",
+        "text": "Zalı komplektləşdirməyə kömək edirik"
+      }
+    },
+    "stats": {
+      "models": "kataloqda model",
+      "brands": "rəsmi brend",
+      "years": "il bazarda"
+    },
+    "heroBadge": "Özbəkistanda rəsmi tədarükçü",
+    "exploreCatalog": "Kataloqu aç",
+    "talkToUs": "Avadanlıq seç",
+    "turnkeyEyebrow": "Açar-təslim",
+    "turnkeyTitle": "Zalı tam layihələndirib yığırıq",
+    "turnkeyText": "Trenajyorların yerləşdirilməsi və döşəmə örtüklərindən tutmuş yerində yığılma və servisə qədər. Özbəkistan üzrə klublar, otellər və korporativ zallarla işləyirik.",
+    "scroll": "Aşağı sürüşdürün",
+    "popularEyebrow": "Müştəri seçimi"
+  },
+  "catalog": {
+    "title": "Kataloq",
+    "productCount": "{count, plural, other {# məhsul}}",
+    "allProducts": "Bütün məhsullar",
+    "filters": "Filtrlər",
+    "sort": "Sıralama",
+    "sortNewest": "Əvvəlcə yenilər",
+    "sortNameAsc": "Ada görə A-Z",
+    "sortPriceAsc": "Əvvəlcə ucuzlar",
+    "sortPriceDesc": "Əvvəlcə bahalılar",
+    "brand": "Brend",
+    "category": "Kateqoriya",
+    "inStockOnly": "Yalnız mövcud olanlar",
+    "nothingFound": "Məhsul tapılmadı",
+    "nothingFoundText": "Filtrləri və ya axtarış sorğusunu dəyişin.",
+    "subcategories": "Alt kateqoriyalar"
+  },
+  "product": {
+    "sku": "Artikul",
+    "brand": "Brend",
+    "availability": "Mövcudluq",
+    "inStock": "Mövcuddur",
+    "outOfStock": "Mövcud deyil",
+    "preOrder": "Ön sifariş",
+    "onOrder": "Sifarişlə",
+    "addToCart": "Səbətə",
+    "inCart": "Səbətdə",
+    "priceOnRequest": "Qiymət sorğu ilə",
+    "requestPrice": "Qiyməti öyrən",
+    "description": "Təsvir",
+    "noDescription": "Təsvir tezliklə əlavə olunacaq. Bizə zəng edin — model haqqında ətraflı danışaq.",
+    "specs": "Xüsusiyyətlər",
+    "related": "Oxşar məhsullar",
+    "quantity": "Miqdar",
+    "gallery": "Məhsul şəkilləri"
+  },
+  "cart": {
+    "title": "Səbət",
+    "empty": "Səbət boşdur",
+    "emptyText": "Kataloqdan trenajyor əlavə edin — sifarişi rəsmiləşdirək.",
+    "continue": "Alış-verişə davam",
+    "subtotal": "Cəmi",
+    "total": "Yekun",
+    "checkout": "Sifarişi rəsmiləşdir",
+    "quoteNotice": "Sifarişdə qiyməti olmayan mövqelər var — menecer sizinlə əlaqə saxlayıb qiyməti təsdiqləyəcək."
+  },
+  "checkout": {
+    "title": "Sifarişin rəsmiləşdirilməsi",
+    "contact": "Əlaqə məlumatları",
+    "firstName": "Ad",
+    "lastName": "Soyad",
+    "city": "Şəhər",
+    "addressLine": "Çatdırılma ünvanı",
+    "comment": "Sifarişə qeyd",
+    "payment": "Ödəniş üsulu",
+    "paymentCash": "Təhvil alarkən nağd",
+    "paymentTransfer": "Bank köçürməsi",
+    "paymentCard": "Təhvil alarkən kart",
+    "placeOrder": "Sifarişi təsdiqlə",
+    "summary": "Sifarişiniz",
+    "successTitle": "Sifariş üçün təşəkkür!",
+    "successText": "Menecer təsdiq üçün qısa zamanda sizinlə əlaqə saxlayacaq.",
+    "orderNumber": "Sifariş nömrəsi"
+  },
+  "lead": {
+    "title": "Qiyməti öyrən",
+    "text": "Əlaqə məlumatlarınızı qoyun — menecer zəng edib aktual qiyməti bildirəcək.",
+    "name": "Adınız",
+    "message": "Mesaj",
+    "sent": "Sorğu göndərildi",
+    "sentText": "İş saatlarında sizinlə əlaqə saxlayacağıq.",
+    "callback": "Zəng sifariş et"
+  },
+  "account": {
+    "login": "Daxil ol",
+    "register": "Qeydiyyat",
+    "logout": "Çıxış",
+    "title": "Şəxsi kabinet",
+    "orders": "Sifarişlərim",
+    "profile": "Profil",
+    "password": "Şifrə",
+    "noOrders": "Hələ sifariş yoxdur",
+    "noAccount": "Hesabınız yoxdur?",
+    "haveAccount": "Hesabınız var?",
+    "invalidCredentials": "E-poçt və ya şifrə yanlışdır",
+    "emailTaken": "Bu e-poçt artıq qeydiyyatdan keçib",
+    "passwordTooShort": "Şifrə ən azı 8 simvol olmalıdır"
+  },
+  "search": {
+    "title": "Axtarış",
+    "resultsFor": "Sorğu nəticələri",
+    "noResults": "Heç nə tapılmadı"
+  },
+  "blog": {
+    "title": "Bloq",
+    "readMore": "Oxu",
+    "empty": "Hələ məqalə yoxdur",
+    "backToBlog": "Bütün məqalələr"
+  },
+  "footer": {
+    "info": "Məlumat",
+    "catalogue": "Kataloq",
+    "contacts": "Əlaqə",
+    "followUs": "Sosial şəbəkələrdə",
+    "rights": "Bütün hüquqlar qorunur"
+  },
+  "brands": {
+    "title": "Brendlər",
+    "subtitle": "Etibarlı istehsalçılardan rəsmi tədarük."
+  },
+  "contacts": {
+    "title": "Əlaqə",
+    "writeUs": "Bizə yazın",
+    "workingHours": "İş saatları"
+  },
+  "errors": {
+    "notFoundTitle": "Səhifə tapılmadı",
+    "notFoundText": "Ola bilsin məhsul satışdan çıxıb və ya ünvan səhv yazılıb.",
+    "goHome": "Ana səhifəyə"
+  }
+}

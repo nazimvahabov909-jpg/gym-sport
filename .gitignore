@@ -32,6 +32,8 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+# …but the template is placeholders only, and a clone needs it.
+!.env.example
 
 # vercel
 .vercel
@@ -39,3 +41,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/src/generated/prisma
+/public/media/uploads/*
+!/public/media/uploads/.gitkeep
+
+# Prisma's generated agent-skill files — reproducible, not source
+/.agents
+/.claude
+/.windsurf
+/skills-lock.json

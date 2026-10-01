@@ -3,24 +3,49 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3001",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "start": "next start -p 3001",
+    "lint": "eslint",
+    "scrape": "tsx scripts/scrape-source.ts",
+    "db:import": "tsx scripts/import-catalog.ts",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:studio": "prisma studio",
+    "typecheck": "tsc --noEmit",
+    "e2e:order": "node scripts/dev/e2e-order.mjs",
+    "e2e:admin": "node scripts/dev/e2e-admin.mjs",
+    "e2e:admin-write": "node scripts/dev/e2e-admin-write.mjs",
+    "check:locales": "node scripts/dev/check-locales.mjs",
+    "db:clean": "tsx scripts/dev/clean-test-data.ts",
+    "messages": "python3 scripts/build-messages.py",
+    "check:hydration": "node scripts/dev/check-hydration.mjs"
   },
   "dependencies": {
+    "@prisma/client": "^7.10.0",
+    "bcryptjs": "^3.0.3",
+    "jose": "^6.2.12",
     "next": "16.3.5",
+    "next-intl": "^4.14.6",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "zod": "^4.6.5",
+    "@prisma/adapter-mariadb": "^7.10.0",
+    "server-only": "^0.0.1",
+    "lucide-react": "^0.545.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv": "^18.0.2",
     "eslint": "^9",
     "eslint-config-next": "16.3.5",
+    "prisma": "^7.10.0",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "tsx": "^4.20.6",
+    "typescript": "^5",
+    "iconv-lite": "^0.6.3",
+    "puppeteer-core": "^24.15.0"
   }
 }

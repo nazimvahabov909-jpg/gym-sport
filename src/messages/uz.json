@@ -1,0 +1,209 @@
+{
+  "common": {
+    "siteName": "United Sport",
+    "tagline": "Fitnes-klublar va uy uchun jihozlar",
+    "search": "Qidirish",
+    "searchPlaceholder": "Trenajyor, brend yoki artikul toping…",
+    "menu": "Menyu",
+    "close": "Yopish",
+    "loading": "Yuklanmoqda…",
+    "viewAll": "Barchasini ko‘rish",
+    "readMore": "Batafsil",
+    "back": "Orqaga",
+    "home": "Bosh sahifa",
+    "language": "Til",
+    "phone": "Telefon",
+    "email": "E-pochta",
+    "address": "Manzil",
+    "send": "Yuborish",
+    "sending": "Yuborilmoqda…",
+    "save": "Saqlash",
+    "cancel": "Bekor qilish",
+    "remove": "O‘chirish",
+    "apply": "Qo‘llash",
+    "reset": "Tozalash",
+    "required": "Majburiy maydon",
+    "somethingWrong": "Nimadir xato ketdi. Qayta urinib ko‘ring.",
+    "prev": "Oldingi",
+    "next": "Keyingi",
+    "skipToContent": "Kontentga o‘tish",
+    "showMore": "Yana ko‘rsatish",
+    "page": "Sahifa",
+    "of": "dan"
+  },
+  "nav": {
+    "home": "Bosh sahifa",
+    "catalog": "Katalog",
+    "brands": "Brendlar",
+    "blog": "Blog",
+    "contacts": "Kontaktlar",
+    "about": "Biz haqimizda",
+    "delivery": "Yetkazib berish",
+    "account": "Kabinet",
+    "cart": "Savat",
+    "wishlist": "Saralangan"
+  },
+  "home": {
+    "heroTitle": "Zal va uy uchun professional trenajyorlar",
+    "heroSubtitle": "O‘zbekistonda Ferro, VolksGym, MBH Fitness va Kettler rasmiy yetkazib beruvchisi",
+    "shopNow": "Katalogga",
+    "categoriesTitle": "Kategoriyalar",
+    "latestTitle": "Yangiliklar",
+    "featuredTitle": "Tavsiya etamiz",
+    "brandsTitle": "Bizning brendlar",
+    "blogTitle": "Maqolalar",
+    "seoTitle": "Fitnes-klublar va zallar uchun sport tovarlari. Uy uchun trenajyorlar.",
+    "seoText": "Katalogimizdan Toshkentdagi fitnes-klub uchun jihozlarni tanlashingiz mumkin. Trenajyor zali uchun sifatli jihozlarning katta assortimenti qulay narxlarda: kuch va kardio trenajyorlar, fitnes jihozlari, erkin yuklar, inventar tayanchlari va pol qoplamalari. Zalni to‘liq jihozlashda biz yordam beramiz.",
+    "benefits": {
+      "delivery": {
+        "title": "O‘zbekiston bo‘ylab yetkazib berish",
+        "text": "Zalgacha yetkazib beramiz"
+      },
+      "warranty": {
+        "title": "Rasmiy kafolat",
+        "text": "Ishlab chiqaruvchi kafolati"
+      },
+      "service": {
+        "title": "Servis va montaj",
+        "text": "O‘z servis xizmatimiz"
+      },
+      "support": {
+        "title": "Jihozlarni tanlash",
+        "text": "Zalni jihozlashda yordam"
+      }
+    },
+    "stats": {
+      "models": "katalogdagi model",
+      "brands": "rasmiy brend",
+      "years": "yil bozorda"
+    },
+    "heroBadge": "O‘zbekistonda rasmiy yetkazib beruvchi",
+    "exploreCatalog": "Katalogni ochish",
+    "talkToUs": "Jihozlarni tanlash",
+    "turnkeyEyebrow": "Kalit topshirish",
+    "turnkeyTitle": "Zalni to‘liq loyihalab yig‘amiz",
+    "turnkeyText": "Trenajyorlarni joylashtirish va pol qoplamalaridan tortib, joyida yig‘ish va servisgacha. O‘zbekiston bo‘ylab klublar, mehmonxonalar va korporativ zallar bilan ishlaymiz.",
+    "scroll": "Pastga suring",
+    "popularEyebrow": "Mijozlar tanlovi"
+  },
+  "catalog": {
+    "title": "Katalog",
+    "productCount": "{count, plural, other {# ta mahsulot}}",
+    "allProducts": "Barcha mahsulotlar",
+    "filters": "Filtrlar",
+    "sort": "Saralash",
+    "sortNewest": "Avval yangilari",
+    "sortNameAsc": "Nomi bo‘yicha A-Z",
+    "sortPriceAsc": "Avval arzonlari",
+    "sortPriceDesc": "Avval qimmatlari",
+    "brand": "Brend",
+    "category": "Kategoriya",
+    "inStockOnly": "Faqat mavjudlari",
+    "nothingFound": "Mahsulot topilmadi",
+    "nothingFoundText": "Filtrlarni yoki so‘rovni o‘zgartirib ko‘ring.",
+    "subcategories": "Ichki kategoriyalar"
+  },
+  "product": {
+    "sku": "Artikul",
+    "brand": "Brend",
+    "availability": "Mavjudligi",
+    "inStock": "Mavjud",
+    "outOfStock": "Mavjud emas",
+    "preOrder": "Oldindan buyurtma",
+    "onOrder": "Buyurtma asosida",
+    "addToCart": "Savatga",
+    "inCart": "Savatda",
+    "priceOnRequest": "Narx so‘rov bo‘yicha",
+    "requestPrice": "Narxni bilish",
+    "description": "Tavsif",
+    "noDescription": "Tavsif tez orada qo‘shiladi. Bizga qo‘ng‘iroq qiling — model haqida batafsil aytamiz.",
+    "specs": "Xususiyatlari",
+    "related": "O‘xshash mahsulotlar",
+    "quantity": "Miqdori",
+    "gallery": "Mahsulot rasmlari"
+  },
+  "cart": {
+    "title": "Savat",
+    "empty": "Savat bo‘sh",
+    "emptyText": "Katalogdan trenajyor qo‘shing — buyurtmani rasmiylashtiramiz.",
+    "continue": "Xaridni davom ettirish",
+    "subtotal": "Jami",
+    "total": "Umumiy",
+    "checkout": "Buyurtma berish",
+    "quoteNotice": "Buyurtmada narxsiz pozitsiyalar bor — menejer siz bilan bog‘lanib narxni tasdiqlaydi."
+  },
+  "checkout": {
+    "title": "Buyurtmani rasmiylashtirish",
+    "contact": "Aloqa ma‘lumotlari",
+    "firstName": "Ism",
+    "lastName": "Familiya",
+    "city": "Shahar",
+    "addressLine": "Yetkazib berish manzili",
+    "comment": "Buyurtmaga izoh",
+    "payment": "To‘lov usuli",
+    "paymentCash": "Qabul qilishda naqd",
+    "paymentTransfer": "Bank o‘tkazmasi",
+    "paymentCard": "Qabul qilishda karta",
+    "placeOrder": "Buyurtmani tasdiqlash",
+    "summary": "Sizning buyurtmangiz",
+    "successTitle": "Buyurtma uchun rahmat!",
+    "successText": "Menejer yaqin orada tasdiqlash uchun siz bilan bog‘lanadi.",
+    "orderNumber": "Buyurtma raqami"
+  },
+  "lead": {
+    "title": "Narxni bilish",
+    "text": "Kontaktlaringizni qoldiring — menejer qo‘ng‘iroq qilib narxni aytadi.",
+    "name": "Ismingiz",
+    "message": "Xabar",
+    "sent": "So‘rov yuborildi",
+    "sentText": "Ish vaqtida siz bilan bog‘lanamiz.",
+    "callback": "Qo‘ng‘iroq buyurtma qilish"
+  },
+  "account": {
+    "login": "Kirish",
+    "register": "Ro‘yxatdan o‘tish",
+    "logout": "Chiqish",
+    "title": "Shaxsiy kabinet",
+    "orders": "Buyurtmalarim",
+    "profile": "Profil",
+    "password": "Parol",
+    "noOrders": "Hozircha buyurtma yo‘q",
+    "noAccount": "Akkaunt yo‘qmi?",
+    "haveAccount": "Akkaunt bormi?",
+    "invalidCredentials": "E-pochta yoki parol noto‘g‘ri",
+    "emailTaken": "Bu e-pochta allaqachon ro‘yxatdan o‘tgan",
+    "passwordTooShort": "Parol kamida 8 belgidan iborat bo‘lsin"
+  },
+  "search": {
+    "title": "Qidiruv",
+    "resultsFor": "So‘rov natijalari",
+    "noResults": "Hech narsa topilmadi"
+  },
+  "blog": {
+    "title": "Blog",
+    "readMore": "O‘qish",
+    "empty": "Hozircha maqola yo‘q",
+    "backToBlog": "Barcha maqolalar"
+  },
+  "footer": {
+    "info": "Ma‘lumot",
+    "catalogue": "Katalog",
+    "contacts": "Kontaktlar",
+    "followUs": "Ijtimoiy tarmoqlarda",
+    "rights": "Barcha huquqlar himoyalangan"
+  },
+  "brands": {
+    "title": "Brendlar",
+    "subtitle": "Ishonchli ishlab chiqaruvchilardan rasmiy yetkazib berish."
+  },
+  "contacts": {
+    "title": "Kontaktlar",
+    "writeUs": "Bizga yozing",
+    "workingHours": "Ish vaqti"
+  },
+  "errors": {
+    "notFoundTitle": "Sahifa topilmadi",
+    "notFoundText": "Balki mahsulot sotuvdan olingan yoki manzil noto‘g‘ri kiritilgan.",
+    "goHome": "Bosh sahifaga"
+  }
+}
