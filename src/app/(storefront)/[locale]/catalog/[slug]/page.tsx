@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { locales, type Locale } from "@/i18n/routing";
 import { db } from "@/lib/db";
+import { staticParamsSafe } from "@/lib/safe-query";
 import {
   getCategoryBranchIds,
   getCategoryBySlug,
@@ -20,11 +21,13 @@ type Props = {
 };
 
 export async function generateStaticParams() {
-  const rows = await db.categoryTranslation.findMany({
-    where: { category: { isActive: true } },
-    select: { locale: true, slug: true },
+  return staticParamsSafe(async () => {
+    const rows = await db.categoryTranslation.findMany({
+      where: { category: { isActive: true } },
+      select: { locale: true, slug: true },
+    });
+    return rows.filter((r) => (locales as readonly string[]).includes(r.locale));
   });
-  return rows.filter((r) => (locales as readonly string[]).includes(r.locale));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

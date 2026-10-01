@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
 import { db } from "@/lib/db";
+import { staticParamsSafe } from "@/lib/safe-query";
 import { getBrandBySlug } from "@/lib/queries/catalog";
 import { alternatesFor, openGraph } from "@/lib/seo";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
@@ -15,8 +16,10 @@ type Props = {
 };
 
 export async function generateStaticParams() {
-  const brands = await db.brand.findMany({ where: { isActive: true }, select: { slug: true } });
-  return brands;
+  return staticParamsSafe(async () => {
+    const brands = await db.brand.findMany({ where: { isActive: true }, select: { slug: true } });
+    return brands;
+  });
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

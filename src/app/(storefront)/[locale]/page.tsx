@@ -8,6 +8,7 @@ import { getSettings } from "@/lib/settings";
 import { alternatesFor, jsonLdScript, openGraph, samePath, websiteJsonLd } from "@/lib/seo";
 import { formatDate } from "@/lib/format";
 import { db } from "@/lib/db";
+import { buildSafe } from "@/lib/safe-query";
 import {
   getBrands,
   getCategoryTree,
@@ -60,7 +61,7 @@ export default async function HomePage({ params }: Props) {
       getFeaturedProducts(locale, 4),
       getBrands(),
       getPosts(locale, 3),
-      db.product.count({ where: { isActive: true } }),
+      buildSafe("product count", () => db.product.count({ where: { isActive: true } }), 0),
     ]);
 
   const benefits = [

@@ -2,6 +2,7 @@ import { cache } from "react";
 import { db } from "@/lib/db";
 import type { Locale } from "@/i18n/routing";
 import { toNumber } from "@/lib/format";
+import { buildSafe } from "@/lib/safe-query";
 import type { Prisma } from "@/generated/prisma/client";
 
 export type ProductCardData = {
@@ -67,7 +68,8 @@ function toCard(row: CardRow): ProductCardData {
 
 // ─── Categories ─────────────────────────────────────────────────────────────
 
-export const getCategoryTree = cache(async (locale: Locale): Promise<CategoryNode[]> => {
+export const getCategoryTree = cache(async (locale: Locale): Promise<CategoryNode[]> =>
+  buildSafe("categories", async () => {
   const rows = await db.category.findMany({
     where: { isActive: true },
     orderBy: { sortOrder: "asc" },
@@ -112,7 +114,8 @@ export const getCategoryTree = cache(async (locale: Locale): Promise<CategoryNod
   roots.forEach(rollUp);
 
   return roots;
-});
+  }, []),
+);
 
 export const getCategoryBySlug = cache(async (locale: Locale, slug: string) => {
   const translation = await db.categoryTranslation.findUnique({
@@ -234,22 +237,29 @@ export async function listProducts(params: ProductListParams) {
   };
 }
 
-export const getFeaturedProducts = cache(async (locale: Locale, take = 8) => {
-  const rows = await db.product.findMany({
-    where: { isActive: true, isFeatured: true },
-    orderBy: { sortOrder: "asc" },
-    take,
-    select: cardSelect(locale),
-  });
-  return rows.map(toCard);
-});
+export const getFeaturedProducts = cache(async (locale: Locale, take = 8) =>
+  buildSafe(
+    "featured products",
+    async () => {
+      const rows = await db.product.findMany({
+        where: { isActive: true, isFeatured: true },
+        orderBy: { sortOrder: "asc" },
+        take,
+        select: cardSelect(locale),
+      });
+      return rows.map(toCard);
+    },
+    [],
+  ),
+);
 
 /**
  * A spread across the top-level sections rather than whichever rows happen to
  * be newest — an imported catalogue shares one timestamp, so "latest" would
  * otherwise show eight variations of the same accessory.
  */
-export const getDiverseProducts = cache(async (locale: Locale, take = 8) => {
+export const getDiverseProducts = cache(async (locale: Locale, take = 8) =>
+  buildSafe("diverse products", async () => {
   const roots = await db.category.findMany({
     where: { isActive: true, parentId: null },
     orderBy: { sortOrder: "asc" },
@@ -279,17 +289,24 @@ export const getDiverseProducts = cache(async (locale: Locale, take = 8) => {
     }
   }
   return out.map(toCard);
-});
+  }, []),
+);
 
-export const getLatestProducts = cache(async (locale: Locale, take = 8) => {
-  const rows = await db.product.findMany({
-    where: { isActive: true },
-    orderBy: [{ createdAt: "desc" }, { id: "desc" }],
-    take,
-    select: cardSelect(locale),
-  });
-  return rows.map(toCard);
-});
+export const getLatestProducts = cache(async (locale: Locale, take = 8) =>
+  buildSafe(
+    "latest products",
+    async () => {
+      const rows = await db.product.findMany({
+        where: { isActive: true },
+        orderBy: [{ createdAt: "desc" }, { id: "desc" }],
+        take,
+        select: cardSelect(locale),
+      });
+      return rows.map(toCard);
+    },
+    [],
+  ),
+);
 
 export const getProductBySlug = cache(async (locale: Locale, slug: string) => {
   const translation = await db.productTranslation.findUnique({
@@ -344,8 +361,9 @@ export const getCategorySlugsByLocale = cache(async (categoryId: number) => {
 
 // ─── Brands ─────────────────────────────────────────────────────────────────
 
-export const getBrands = cache(async () => {
-  return db.brand.findMany({
+export const getBrands = cache(async () =>
+  buildSafe("brands", () =>
+    db.brand.findMany({
     where: { isActive: true },
     orderBy: { sortOrder: "asc" },
     select: {
@@ -354,9 +372,11 @@ export const getBrands = cache(async () => {
       slug: true,
       logo: true,
       _count: { select: { products: true } },
-    },
-  });
-});
+      },
+    }),
+    [],
+  ),
+);
 
 export const getBrandBySlug = cache(async (locale: Locale, slug: string) => {
   return db.brand.findFirst({

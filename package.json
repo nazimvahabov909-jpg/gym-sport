@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3001",
-    "build": "next build",
-    "start": "next start -p 3001",
+    "build": "prisma generate && next build",
+    "start": "next start",
     "lint": "eslint",
     "scrape": "tsx scripts/scrape-source.ts",
     "db:import": "tsx scripts/import-catalog.ts",
@@ -18,7 +18,8 @@
     "check:locales": "node scripts/dev/check-locales.mjs",
     "db:clean": "tsx scripts/dev/clean-test-data.ts",
     "messages": "python3 scripts/build-messages.py",
-    "check:hydration": "node scripts/dev/check-hydration.mjs"
+    "check:hydration": "node scripts/dev/check-hydration.mjs",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^7.10.0",

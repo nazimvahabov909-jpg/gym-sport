@@ -5,6 +5,7 @@ import { BadgeCheck, PackageCheck, PackageX, Truck } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { locales, type Locale } from "@/i18n/routing";
 import { db } from "@/lib/db";
+import { staticParamsSafe } from "@/lib/safe-query";
 import { getSettings } from "@/lib/settings";
 import { formatMoney, toNumber } from "@/lib/format";
 import {
@@ -32,13 +33,15 @@ import { LeadDialog } from "@/components/catalog/LeadDialog";
 type Props = { params: Promise<{ locale: Locale; slug: string }> };
 
 export async function generateStaticParams() {
-  // Pre-render the most visited slice; the rest renders on demand.
-  const rows = await db.productTranslation.findMany({
-    where: { product: { isActive: true } },
-    select: { locale: true, slug: true },
-    take: 400,
+  return staticParamsSafe(async () => {
+    // Pre-render the most visited slice; the rest renders on demand.
+    const rows = await db.productTranslation.findMany({
+      where: { product: { isActive: true } },
+      select: { locale: true, slug: true },
+      take: 400,
+    });
+    return rows.filter((r) => (locales as readonly string[]).includes(r.locale));
   });
-  return rows.filter((r) => (locales as readonly string[]).includes(r.locale));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

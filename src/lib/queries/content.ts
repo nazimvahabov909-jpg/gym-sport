@@ -1,8 +1,10 @@
 import { cache } from "react";
 import { db } from "@/lib/db";
 import type { Locale } from "@/i18n/routing";
+import { buildSafe } from "@/lib/safe-query";
 
-export const getSlides = cache(async (locale: Locale) => {
+export const getSlides = cache(async (locale: Locale) =>
+  buildSafe("slides", async () => {
   const rows = await db.slide.findMany({
     where: { isActive: true },
     orderBy: { sortOrder: "asc" },
@@ -16,9 +18,11 @@ export const getSlides = cache(async (locale: Locale) => {
     subtitle: row.translations[0]?.subtitle ?? null,
     buttonText: row.translations[0]?.buttonText ?? null,
   }));
-});
+  }, []),
+);
 
-export const getPosts = cache(async (locale: Locale, take?: number) => {
+export const getPosts = cache(async (locale: Locale, take?: number) =>
+  buildSafe("posts", async () => {
   const rows = await db.post.findMany({
     where: { isActive: true, publishedAt: { lte: new Date() } },
     orderBy: { publishedAt: "desc" },
@@ -35,7 +39,8 @@ export const getPosts = cache(async (locale: Locale, take?: number) => {
       slug: row.translations[0].slug,
       excerpt: row.translations[0].excerpt,
     }));
-});
+  }, []),
+);
 
 export const getPostBySlug = cache(async (locale: Locale, slug: string) => {
   const row = await db.postTranslation.findUnique({
